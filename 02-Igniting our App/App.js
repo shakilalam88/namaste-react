@@ -1,3 +1,6 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+
 const heading = React.createElement(
   'div',
   { id: 'parent' },
@@ -12,6 +15,6 @@ const heading = React.createElement(
 //   { id: 'heading', class: 'heading' },
 //   'hello world form React!'
 // )
-// const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(heading)

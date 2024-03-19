@@ -35,3 +35,8 @@ li.header-nav-item {
     border: 1px solid;
     height: auto;
 }
+.filter-btn{
+    margin: 10px 0;
+    padding: 10px 5px;
+    cursor: pointer;
+}

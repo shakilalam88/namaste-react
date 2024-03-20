@@ -31,12 +31,26 @@ li.header-nav-item {
 .search {
     padding: 15px 0;
 }
+.search  input.search-box, button.searchBtn {
+    padding: 9px;
+}
 .res-card {
     border: 1px solid;
     height: auto;
+}
+
+.filter {
+    display: flex;
+    gap: 2rem;
+    margin: 0 20px;
 }
 .filter-btn{
     margin: 10px 0;
     padding: 10px 5px;
     cursor: pointer;
+}
+.shimmer-card{
+    margin-top: 50px;
+    height: 320px;
+    background: #f0f0f0;
 }

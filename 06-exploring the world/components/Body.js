@@ -49,7 +49,7 @@ const Body = () => {
           <button
             className="searchBtn"
             onClick={() => {
-              // console.log(searchText)
+              console.log(searchText)
               const updatedRes = apiData.filter((res) => {
                 return res.info.name
                   .toLowerCase()

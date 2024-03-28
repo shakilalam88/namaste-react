@@ -10,6 +10,7 @@ const RestaurantMenu = () => {
   // console.log(resID)
 
   const resInfo = useRestaurantMenu(resID)
+  console.log('resInfo', resInfo)
 
   // useEffect(() => {
   //   fetchMenu()
@@ -29,16 +30,16 @@ const RestaurantMenu = () => {
   // console.log(resInfo)
   // console.log(resInfo?.cards[0]?.card?.card?.info)
   const { name, cuisines, costForTwoMessage } =
-    resInfo?.cards[0]?.card?.card?.info
+    resInfo?.cards[2]?.card?.card?.info
 
   const { itemCards } =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
 
   // console.log(itemCards)
 
   return (
     <div className="menu">
-      <h1>{name}</h1>
+      <h1>{name}Hi</h1>
       <h3>
         {cuisines}-{costForTwoMessage}
       </h3>
@@ -46,13 +47,11 @@ const RestaurantMenu = () => {
         {itemCards.map((item) => {
           return (
             <li key={item.card.info.id}>
-              {item.card.info.name}- Rs.{item.card.info.defaultPrice / 100}
+              {item.card.info.name}- Rs.
+              {item.card.info.price / 100 || item.card.info.defaultPrice / 100}
             </li>
           )
         })}
-        {/* <li>Biryani</li>
-        <li>Burger</li>
-        <li>Coke</li> */}
       </ul>
     </div>
   )
